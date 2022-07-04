@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('~/assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('~/assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsExtraBold';
+    src: url('~/assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+* {
+    font-family: 'PoppinsRegular';
+}
+
+html {
+    scroll-behavior: smooth;
+}   
