@@ -36,7 +36,7 @@
           </div>
           <div class="flex w-full items-start px-14 ">
             <p class="text-sm text-secondary-text">
-              Fullstack developer | Web Developer focused on creating Web applications. I really like different projects that solve real problems.
+              Fullstack developer | Web Developer focused on creating Web applications. <br>I really like different projects that solve real problems.
             </p>
             
           </div>
