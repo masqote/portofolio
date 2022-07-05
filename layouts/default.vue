@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary-light scrollbar-hide">
+  <div class="scrollbar-hide">
     <Nuxt />
   </div>
 </template>

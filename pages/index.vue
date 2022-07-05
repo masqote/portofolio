@@ -1,40 +1,40 @@
 <template>
   <div class="scrollbar-hide ">
     <!-- HEADER -->
-    <div class="w-full relative h-screen overflow-hidden">
-      <div class="fixed top-4 z-50 w-full h-16 text-white flex justify-center items-center space-x-12" :class="{' transition ease-in-out delay-100 bg-secondary-text bg-opacity-5 drop-shadow-xl backdrop-blur-xl top-0 ': scrollPosition > 50}">
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
-          <div class="h-1.5 w-1.5 rounded-full bg-primary drop-shadow-lg"></div>
-          <a href="#"><div class="drop-shadow-xl text-primary">Home</div></a>
+    <div class="w-full relative h-screen overflow-hidden bg-secondary-light ">
+      <div class="fixed top-2 z-50 w-full h-16 text-white flex justify-around px-2 md:px-0 md:justify-center items-center md:space-x-12 " :class="{' transition ease-in-out delay-100 bg-secondary-text bg-opacity-5 drop-shadow-xl backdrop-blur-xl -top-2 my-2': scrollPosition > 10}">
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 1">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 1}"></div>
+          <a href="#"><div class="drop-shadow-xl " :class="{'text-primary': activeMenu == 1}">Home</div></a>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
-          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
-          <a href="#about"><div class="drop-shadow-xl">About Me</div></a>
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer " @click="activeMenu = 2">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 2}"></div>
+          <a href="#about"><div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 2}">About Me</div></a>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
-          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
-          <a href="#skill"><div class="drop-shadow-xl">Skill</div></a>
+        <div class="hidden md:flex md:flex-col md:items-center md:justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 3">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 3}"></div>
+          <a href="#skill"><div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 3}">Skill</div></a>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
-          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
-          <div class="drop-shadow-xl">Projects</div>
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 4">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 4}"></div>
+          <div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 4}">Projects</div>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
-          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
-          <div class="drop-shadow-xl">Contact</div>
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 5">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 5}"></div>
+          <div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 5}">Contact</div>
         </div>
       </div>
 
-      <div class="absolute inset-0 mx-auto my-auto z-30 h-3/4 w-10/12 text-white flex items-center">
-        <div class="flex flex-col justify-center w-1/2 h-full space-y-4 items-center">
-          <div class="flex flex-col w-full items-start  px-14 ">
-            <h2 class="text-3xl text-primary font-black uppercase">Medhy Pradana Putra</h2>
-            <div class="border-2 w-3/4  mr-8 self-end border-primary"></div>
+      <div class="absolute bottom-4  md:inset-0 mx-auto my-auto z-30 h-1/2  w-full md:w-10/12 text-white flex items-center">
+        <div class="flex flex-col justify-center w-full md:w-1/2 h-full space-y-4 items-center">
+          <div class="flex flex-col w-full items-start px-10 md:px-14">
+            <h2 class="text-2xl md:text-3xl text-primary font-black uppercase">Medhy Pradana Putra</h2>
+            <div class="border md:border-2 w-3/4  md:mr-8 self-end border-primary"></div>
           </div>
-          <div class="flex w-full items-start px-14 ">
-            <h2 class="text-3xl text-white font-black ">Web Developer | Fullstack Developer</h2>
+          <div class="flex w-full items-start px-10 md:px-14 ">
+            <h2 class="text-xl text-white font-black ">Web Developer | Fullstack Developer</h2>
           </div>
-          <div class="flex w-full items-start px-14 ">
+          <div class="flex w-full items-start px-10 md:px-14 ">
             <p class="text-sm text-secondary-text">
               Fullstack developer | Web Developer focused on creating Web applications. <br>I really like different projects that solve real problems.
             </p>
@@ -45,17 +45,14 @@
             <ButtonSolid text="Portofolio" iconName="circle_down.svg"/>
           </div>
         </div>
-
-        
-        
       </div>
       
-      <div class="absolute bg-secondary-light h-full w-full z-0"></div>
+      <div class="hidden md:block absolute bg-secondary-light h-full w-full z-0"></div>
 
-      <div class="absolute transform bg-secondary-dark h-full w-9/12 z-10 overflow-hidden text-white">
+      <div class="hidden md:block absolute transform bg-secondary-dark h-full w-9/12 z-10 overflow-hidden text-white">
       </div>
 
-      <div class="absolute bg-secondary-light w-[200vh] h-[80vh] rotate-[60deg] -top-40 ml-[16rem] transform z-10 overflow-hidden">
+      <div class="hidden md:block absolute bg-secondary-light w-[200vh] h-[80vh] rotate-[60deg] -top-40 ml-[16rem] transform z-10 overflow-hidden">
         <div class="flex justify-center items-center pt-52 w-screen h-screen ">
           <div class="absolute pt-56 border-4 blur-lg border-primary w-[600px]  h-[600px] rounded-full top-72 ml-[48vh]"></div>
           <div class="absolute pt-56 border-4 blur-md border-primary w-[600px]  h-[600px] rounded-full top-72 ml-[48vh]"></div>
@@ -66,18 +63,29 @@
           </div>
         </div>
       </div>
-        
-      
+
+      <div class="w-full flex justify-center md:hidden absolute top-28">
+        <div class="absolute w-[300px] h-[300px] ">
+          
+          <div class="absolute blur-xl  border-4 border-primary w-full h-full  rounded-full z-20"></div>
+          <div class="absolute blur-lg  border-4 border-primary w-full h-full  rounded-full z-20"></div>
+          <div class="absolute blur-md  border-4 border-primary w-full h-full  rounded-full z-20"></div>
+          <div class="absolute  border-4 border-primary w-full h-full  rounded-full overflow-hidden z-20 ">
+              <img src="~/assets/img/medhy.png" class="absolute transform -rotate-3 left-5 grayscale">
+          </div>
+        </div>
+      </div>
+    
     </div>
     <!-- END HEADER -->
 
     <!-- ABOUT ME -->
     <div class="flex w-full relative h-[50vh] bg-secondary justify-center text-white overflow-hidden" id="about">
-      <div class="text-secondary-textdark absolute inset-4  font-black ">
-        <div class=" absolute top-4 -right-32 text-9xl">ABOUT</div>
+      <div class="text-secondary-textdark absolute inset-4  font-black z-10">
+        <div class=" absolute top-4 md:-right-32 -right-36 text-9xl">ABOUT</div>
       </div>
       <div class="text-secondary-textdark absolute inset-4  font-black ">
-        <div class=" absolute bottom-0 -left-6 w-1/12 space-y-2">
+        <div class=" absolute bottom-0 -left-6 md:w-2/12 space-y-2">
           <div class="flex space-x-2">
             <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
             <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
@@ -98,10 +106,10 @@
           </div>
         </div>
       </div>
-      <div class="w-1/2 h-full  flex flex-col items-center space-y-8 ">
+      <div class="w-full md:px-0 md:w-1/2 h-full flex flex-col items-center space-y-8 z-20">
         <div class="items-center flex flex-col mt-20">
-          <span class="text-2xl px-40 uppercase font-black">About Me</span>
-          <div class="border-2 border-primary w-1/12"></div>
+          <span class="text-2xl md:px-40 uppercase font-black">About Me</span>
+          <div class="border md:border-2 border-primary w-4/12 md:w-1/12"></div>
         </div>
         <div class="flex w-3/4">
           <p class="text-md text-secondary-text text-center">Hello, you can call me <span class="text-primary">Medhy</span> and I am <span class="text-primary">{{getYear}}</span> years old. <br>
@@ -178,16 +186,23 @@ export default {
   data(){
     return{
       birth: 1995,
-      scrollPosition: null
+      scrollPosition: null,
+      activeMenu: 1, // 1,2,3,4
     }
   },
   methods: {
     updateScroll() {
        this.scrollPosition = window.scrollY
+       if (this.scrollPosition > 0 && this.scrollPosition < 200) {
+          this.activeMenu = 1
+       }else if(this.scrollPosition > 650){
+          this.activeMenu = 2
+       }
     }
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
+    
   },
   computed: { 
     getYear () {
