@@ -2,7 +2,7 @@
   <div class="scrollbar-hide ">
     <!-- HEADER -->
     <div class="w-full relative h-screen overflow-hidden">
-      <div class="fixed top-4 z-50 w-full h-16 text-white flex justify-center items-center space-x-12">
+      <div class="fixed top-4 z-50 w-full h-16 text-white flex justify-center items-center space-x-12" :class="{' transition ease-in-out delay-100 bg-secondary-text bg-opacity-5 drop-shadow-xl backdrop-blur-xl top-0 ': scrollPosition > 50}">
         <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
           <div class="h-1.5 w-1.5 rounded-full bg-primary drop-shadow-lg"></div>
           <a href="#"><div class="drop-shadow-xl text-primary">Home</div></a>
@@ -10,6 +10,10 @@
         <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
           <a href="#about"><div class="drop-shadow-xl">About Me</div></a>
+        </div>
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
+          <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
+          <a href="#skill"><div class="drop-shadow-xl">Skill</div></a>
         </div>
         <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer">
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg"></div>
@@ -109,11 +113,57 @@
     </div>
     <!-- END ABOUT ME -->
 
-    <!-- MY SERVICES -->
-    <div class="flex w-full relative h-[50vh] bg-secondary justify-center text-white overflow-hidden" id="about">
-      <div class="w-3/4 h-full  flex flex-col items-center space-y-8 border">
-        <div class="items-center flex flex-col mt-20">
-          <span class="text-xl  font-black">My Services</span>
+    <!-- MY SKILLS -->
+    <div class="flex w-full relative bg-secondary justify-center text-white " id="skill">
+      <div class="w-3/4 h-full  flex flex-col items-center space-y-8 mb-10 p-10">
+        <div class="items-center flex flex-col">
+          <span class="text-xl  font-black">My Skills</span>
+        </div>
+        <div class="grid grid-cols-5 gap-4 w-3/4">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+              <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
+              <span class="text-primary">Vue.js</span>
+            </div>
         </div>
       </div>
     </div>
@@ -127,15 +177,25 @@ export default {
   name: 'IndexPage',
   data(){
     return{
-      birth: 1995
+      birth: 1995,
+      scrollPosition: null
     }
   },
-  computed: {
+  methods: {
+    updateScroll() {
+       this.scrollPosition = window.scrollY
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+  computed: { 
     getYear () {
       const currentDate = new Date()
       const currentYear = currentDate.getFullYear()
       return currentYear - this.birth
-    }
-  }
+    },
+
+  },
 }
 </script>
