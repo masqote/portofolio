@@ -8,6 +8,8 @@
       hover:opacity-80
       flex
       items-center
+      focus:ring-1
+      focus:ring-primary
       space-x-2
     "
   >

@@ -1,25 +1,31 @@
 <template>
-  <div class="scrollbar-hide ">
+  <div class="">
     <!-- HEADER -->
     <div class="w-full relative h-screen overflow-hidden bg-secondary-light ">
+      <div class="md:hidden">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+      </div>
+
       <div class="fixed top-2 z-50 w-full h-16 text-white flex justify-around px-2 md:px-0 md:justify-center items-center md:space-x-12 " :class="{' transition ease-in-out delay-100 bg-secondary-text bg-opacity-5 drop-shadow-xl backdrop-blur-xl -top-2 my-2': scrollPosition > 10}">
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 1">
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" >
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 1}"></div>
           <a href="#"><div class="drop-shadow-xl " :class="{'text-primary': activeMenu == 1}">Home</div></a>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer " @click="activeMenu = 2">
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer " >
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 2}"></div>
           <a href="#about"><div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 2}">About Me</div></a>
         </div>
-        <div class="hidden md:flex md:flex-col md:items-center md:justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 3">
+        <!-- <div class="hidden md:flex md:flex-col md:items-center md:justify-center hover:opacity-80 hover:text-primary cursor-pointer" >
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 3}"></div>
           <a href="#skill"><div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 3}">Skill</div></a>
-        </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 4">
+        </div> -->
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" >
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 4}"></div>
           <div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 4}">Projects</div>
         </div>
-        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" @click="activeMenu = 5">
+        <div class="flex flex-col items-center justify-center hover:opacity-80 hover:text-primary cursor-pointer" >
           <div class="h-1.5 w-1.5 rounded-full  drop-shadow-lg" :class="{'bg-primary' : activeMenu == 5}"></div>
           <div class="drop-shadow-xl" :class="{'text-primary' : activeMenu == 5}">Contact</div>
         </div>
@@ -81,28 +87,28 @@
 
     <!-- ABOUT ME -->
     <div class="flex w-full relative h-[50vh] bg-secondary justify-center text-white overflow-hidden" id="about">
-      <div class="text-secondary-textdark absolute inset-4  font-black z-10">
+      <div class="text-secondary-dark absolute inset-4  font-black z-10">
         <div class=" absolute top-4 md:-right-32 -right-36 text-9xl">ABOUT</div>
       </div>
-      <div class="text-secondary-textdark absolute inset-4  font-black ">
+      <div class="text-secondary-dark absolute inset-4  font-black ">
         <div class=" absolute bottom-0 -left-6 md:w-2/12 space-y-2">
           <div class="flex space-x-2">
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
           </div>
           <div class="flex space-x-2">
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
           </div>
           <div class="flex space-x-2">
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
-            <div class=" rounded-full bg-secondary-textdark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
           </div>
         </div>
       </div>
@@ -111,7 +117,7 @@
           <span class="text-2xl md:px-40 uppercase font-black">About Me</span>
           <div class="border md:border-2 border-primary w-4/12 md:w-1/12"></div>
         </div>
-        <div class="flex w-3/4">
+        <div class="flex w-3/4 justify-center">
           <p class="text-md text-secondary-text text-center">Hello, you can call me <span class="text-primary">Medhy</span> and I am <span class="text-primary">{{getYear}}</span> years old. <br>
               I love coding and i really enjoyed work as <span class="text-primary">Front End Developer</span> <br>I have a creative mind and I always up for <span class="text-primary">new challenges.</span><br>
               Welcome aboard and enjoy the journey.
@@ -122,53 +128,53 @@
     <!-- END ABOUT ME -->
 
     <!-- MY SKILLS -->
-    <div class="flex w-full relative bg-secondary justify-center text-white " id="skill">
-      <div class="w-3/4 h-full  flex flex-col items-center space-y-8 mb-10 p-10">
+    <div class="flex w-full relative bg-secondary justify-center text-white" >
+      <div class="w-full md:w-3/4  h-full  flex flex-col items-center space-y-8 mb-10 md:p-10">
         <div class="items-center flex flex-col">
           <span class="text-xl  font-black">My Skills</span>
         </div>
-        <div class="grid grid-cols-5 gap-4 w-3/4">
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-4 md:w-3/4">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
-            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2">
+            <div class="bg-secondary-light p-5 rounded flex flex-col items-center space-y-2 hover:opacity-60 transition ease-in-out delay-150 hover:scale-110">
               <img src="~/assets/img/vue.png" class="w-5 h-5" alt="">
               <span class="text-primary">Vue.js</span>
             </div>
@@ -176,6 +182,90 @@
       </div>
     </div>
     <!-- END MY SERVICES -->
+
+    <!-- EDUCATION JOBS -->
+    <div class="flex relative w-full bg-secondary justify-center text-white overflow-hidden" >
+      <div class="w-3/4 z-20 justify-center flex">
+          <div class="w-3/4 md:w-full flex flex-col md:flex-row md:justify-between py-10 md:px-40 space-y-4 md:space-y-0 md:divide-y-0 divide-y divide-primary">
+            <!-- EDUCATION -->
+            <div class="flex flex-col pb-4 md:pb-0">
+              <label class="text-xl font-black mb-4 text-center">Education</label>
+              <div class="space-y-4">
+                <div class="w-full">
+                  <div class="w-full md:w-full space-y-1 flex flex-col ">
+                    <div class="text-sm">January 2020 - December 2020</div>
+                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="w-full md:w-full space-y-1 flex flex-col ">
+                    <div class="text-sm">January 2020 - December 2020</div>
+                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JOBS -->
+            <div class="flex flex-col pt-4 md:pt-0">
+              <label class="text-xl font-black mb-4 text-center">Jobs</label>
+              <div class="space-y-4">
+                <div class="w-full">
+                  <div class="w-full md:w-full space-y-1 flex flex-col ">
+                    <div class="text-sm">January 2020 - December 2020</div>
+                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="w-full md:w-full space-y-1 flex flex-col ">
+                    <div class="text-sm">January 2020 - December 2020</div>
+                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="text-secondary-dark absolute inset-4  font-black">
+        <div class=" absolute -top-6 -right-6 md:w-2/12 space-y-2">
+          <div class="flex space-x-2">
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+          </div>
+          <div class="flex space-x-2">
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+          </div>
+          <div class="flex space-x-2">
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+          </div>
+          <div class="flex space-x-2">
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+            <div class=" rounded-full bg-secondary-dark w-4 h-4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-secondary-dark absolute inset-4 font-black z-10">
+        <div class=" absolute bottom-0 -left-14 space-y-2">
+          <span class="text-9xl">UT ME</span>
+        </div>
+      </div>
+    </div>
+    <!-- END EDUCATION JOBS -->
+    
+
     
   </div>
 </template>
