@@ -184,49 +184,49 @@
     <!-- END MY SERVICES -->
 
     <!-- EDUCATION JOBS -->
-    <div class="flex relative w-full bg-secondary justify-center text-white overflow-hidden" >
-      <div class="w-3/4 z-20 justify-center flex">
-          <div class="w-3/4 md:w-full flex flex-col md:flex-row md:justify-between py-10 md:px-40 space-y-4 md:space-y-0 md:divide-y-0 divide-y divide-primary">
-            <!-- EDUCATION -->
-            <div class="flex flex-col pb-4 md:pb-0">
-              <label class="text-xl font-black mb-4 text-center">Education</label>
-              <div class="space-y-4">
-                <div class="w-full">
-                  <div class="w-full md:w-full space-y-1 flex flex-col ">
-                    <div class="text-sm">January 2020 - December 2020</div>
-                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
-                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+    <div class="flex relative w-full bg-secondary justify-center text-white overflow-hidden pb-28" >
+      <div class="w-full md:w-3/4 z-20 justify-center flex">
+          <div class="w-3/4 md:w-full px-4 flex flex-col md:flex-row md:justify-between py-10 md:px-10 lg:px-40 space-y-4 md:space-y-0 md:divide-y-0 divide-y divide-primary">
+              <!-- EDUCATION -->
+              <div class="flex flex-col pb-4 md:pb-0 ">
+                <label class="text-xl font-black mb-4 text-center">Education</label>
+                <div class="space-y-4">
+                  <div class="w-full">
+                    <div class="w-full md:w-full space-y-1 flex flex-col">
+                      <div class="text-sm">January 2020 - December 2020 20200 20200</div>
+                      <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                      <div class="text-xs text-secondary-text">SMK Media Informatika 2018 2020</div>
+                    </div>
                   </div>
-                </div>
-                <div class="w-full">
-                  <div class="w-full md:w-full space-y-1 flex flex-col ">
-                    <div class="text-sm">January 2020 - December 2020</div>
-                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
-                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- JOBS -->
-            <div class="flex flex-col pt-4 md:pt-0">
-              <label class="text-xl font-black mb-4 text-center">Jobs</label>
-              <div class="space-y-4">
-                <div class="w-full">
-                  <div class="w-full md:w-full space-y-1 flex flex-col ">
-                    <div class="text-sm">January 2020 - December 2020</div>
-                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
-                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
-                  </div>
-                </div>
-                <div class="w-full">
-                  <div class="w-full md:w-full space-y-1 flex flex-col ">
-                    <div class="text-sm">January 2020 - December 2020</div>
-                    <div class="text-base text-primary">Teknik Komputer Jaringan</div>
-                    <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                  <div class="w-full">
+                    <div class="w-full md:w-full space-y-1 flex flex-col ">
+                      <div class="text-sm">January 2020 - December 2020</div>
+                      <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                      <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <!-- JOBS -->
+              <div class="flex flex-col pt-4 md:pt-0">
+                <label class="text-xl font-black mb-4 text-center">Jobs</label>
+                <div class="space-y-4">
+                  <div class="w-full">
+                    <div class="w-full md:w-full space-y-1 flex flex-col ">
+                      <div class="text-sm">January 2020 - December 2020</div>
+                      <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                      <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="w-full md:w-full space-y-1 flex flex-col ">
+                      <div class="text-sm">January 2020 - December 2020</div>
+                      <div class="text-base text-primary">Teknik Komputer Jaringan</div>
+                      <div class="text-xs text-secondary-text">SMK Media Informatika</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
       </div>
       <div class="text-secondary-dark absolute inset-4  font-black">
